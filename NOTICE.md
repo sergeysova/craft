@@ -6,6 +6,7 @@
 - **Updated Dependencies**: To ensure you're working with the latest and most secure libraries.
 - **Streamlined Default Editor Content**: Removed Novel-specific links for a cleaner user experience.
 - **Disabled Specific Features**: Including the Image block and AI support, to be reintroduced as optional extensions.
+- **Enabled Syntax Highlighting**: Replaced standard code block extension with another with lowlight support.
 
 ## Removed:
 
