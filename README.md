@@ -91,7 +91,11 @@ The main reason for fork was adding more customisation abilities without needs t
 
 ## Roadmap
 
-- TODO
+- Make CraftEditor controlled to easily integrate with any state-manager
+- Move AI features to an extension to allow user use it or not
+- Move image uploading features to an extension
+- Allow to install any other kinds of blocks to command popup
+- Make CraftEditor fully independent of Vercel (uploading, ai, analytics, etc.)
 
 ## License
 

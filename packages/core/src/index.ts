@@ -3,3 +3,4 @@ import "./styles/tailwind.css";
 import "./styles/prosemirror.css";
 
 export { default as CraftEditor } from "./ui/editor";
+export { defaultEditorContent } from "./ui/editor/default-content";
