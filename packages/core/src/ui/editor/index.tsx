@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { useCurrentEditor, EditorContent, JSONContent, Extension, EditorProvider } from "@tiptap/react";
+import { JSONContent, Extension, EditorProvider } from "@tiptap/react";
 import { defaultEditorProps } from "./props";
 import { defaultExtensions } from "./extensions";
 import { EditorBubbleMenu } from "./bubble-menu";
@@ -7,11 +7,6 @@ import { EditorProps } from "@tiptap/pm/view";
 import { Editor as EditorClass } from "@tiptap/core";
 
 export type CraftEditorProps = {
-  /**
-   * Additional classes to add to the editor container.
-   * Defaults to "relative min-h-[500px] w-full max-w-screen-lg border-stone-200 bg-white sm:mb-[calc(20vh)] sm:rounded-lg sm:border sm:shadow-lg".
-   */
-  className?: string;
   /**
    * The value to use for the editor.
    */
@@ -34,13 +29,7 @@ export type CraftEditorProps = {
   onUpdate?: (editor?: EditorClass) => void | Promise<void>;
 };
 
-export function CraftEditor({
-  className = "relative min-h-[500px] w-full max-w-screen-lg border-stone-200 bg-white sm:mb-[calc(20vh)] sm:rounded-lg sm:border sm:shadow-lg",
-  extensions = [],
-  editorProps = {},
-  value,
-  onUpdate = () => {},
-}: CraftEditorProps) {
+export function CraftEditor({ extensions = [], editorProps = {}, value, onUpdate = () => {} }: CraftEditorProps) {
   const editorExtensions = useMemo(() => [...defaultExtensions, ...extensions], [extensions]);
   const tiptapEditorProps = useMemo(() => ({ ...defaultEditorProps, ...editorProps }), [editorProps]);
 
@@ -52,24 +41,7 @@ export function CraftEditor({
       content={value}
       onUpdate={({ editor }) => onUpdate(editor)}
     >
-      <CraftContent className={className} />
-    </EditorProvider>
-  );
-}
-
-function CraftContent({ className }: { className: string }) {
-  const { editor } = useCurrentEditor();
-
-  return (
-    <div
-      onClick={() => {
-        editor?.chain().focus().run();
-      }}
-      className={className}
-    >
       <EditorBubbleMenu />
-      {/* {editor?.isActive("image") && <ImageResizer editor={editor} />} */}
-      <EditorContent editor={editor} />
-    </div>
+    </EditorProvider>
   );
 }

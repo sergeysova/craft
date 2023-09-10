@@ -43,7 +43,10 @@
     "@tiptap/suggestion": "^2.1.8",
     "tiptap-markdown": "^0.8.2",
     "tippy.js": "^6.3.7",
-    "react-moveable": "^0.54.1"
+    "react-moveable": "^0.54.1",
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "tailwind-config": "workspace:*",

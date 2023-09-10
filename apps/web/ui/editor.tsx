@@ -9,10 +9,12 @@ export default function Editor() {
 
   return (
     <div className="relative w-full max-w-screen-lg">
-      <CraftEditor
-        value={content}
-        onUpdate={(editor) => setContent(editor.getJSON())}
-      />
+      <div className="relative min-h-[500px] w-full max-w-screen-lg border-stone-200 bg-white sm:mb-[calc(20vh)] sm:rounded-lg sm:border sm:shadow-lg">
+        <CraftEditor
+          value={content}
+          onUpdate={(editor) => setContent(editor.getJSON())}
+        />
+      </div>
     </div>
   );
 }

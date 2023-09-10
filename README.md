@@ -96,6 +96,7 @@ I am forked the original [Novel](https://github.com/steven-tey/novel) project to
 - **Image Uploading as an Extension**: To give you the choice to include it or not.
 - **Command Popup Customization**: Allowing the installation of various block types.
 - **Independence from Vercel**: Making CraftEditor fully self-reliant for uploading, AI, analytics, and more.
+- **Notion-like Menu**: For each line, features for transforming, settings, deletion, etc., will be available.
 
 By making these changes, we aim to provide a more flexible and user-friendly editor that can be easily integrated into your existing tech stack.
 

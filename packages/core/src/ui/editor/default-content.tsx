@@ -1,4 +1,6 @@
-export const defaultEditorContent = {
+import { JSONContent } from "@tiptap/core";
+
+export const defaultEditorContent: JSONContent = {
   type: "doc",
   content: [
     {
