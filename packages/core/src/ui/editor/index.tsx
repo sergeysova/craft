@@ -1,5 +1,3 @@
-"use client";
-
 import { useMemo } from "react";
 import { useCurrentEditor, EditorContent, JSONContent, Extension, EditorProvider } from "@tiptap/react";
 import { defaultEditorProps } from "./props";
@@ -36,7 +34,7 @@ export type CraftEditorProps = {
   onUpdate?: (editor?: EditorClass) => void | Promise<void>;
 };
 
-export default function CraftEditor({
+export function CraftEditor({
   className = "relative min-h-[500px] w-full max-w-screen-lg border-stone-200 bg-white sm:mb-[calc(20vh)] sm:rounded-lg sm:border sm:shadow-lg",
   extensions = [],
   editorProps = {},
