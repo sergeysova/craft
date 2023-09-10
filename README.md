@@ -85,17 +85,19 @@ Here's how you can contribute:
 
 ## Fork
 
-This project is a full fork of [Novel](https://github.com/steven-tey/novel) made by Steven Tey.
+This project is an enhanced version of [Novel](https://github.com/steven-tey/novel), originally created by Steven Tey. We've forked it to introduce additional customization options, all without the constraints of maintaining backward compatibility.
 
-The main reason for fork was adding more customisation abilities without needs to support backward compatibility.
+I am forked the original [Novel](https://github.com/steven-tey/novel) project to create `@sergeysova/craft` with the aim of offering a more modular and customizable editor experience. My changes include updating dependencies, streamlining the default editor content, and disabling certain features like the Image block and AI support. These features are not gone for good; rather, I am planning to reintroduce them as optional extensions, giving you the freedom to tailor the editor to your needs.
 
 ## Roadmap
 
-- Make CraftEditor controlled to easily integrate with any state-manager
-- Move AI features to an extension to allow user use it or not
-- Move image uploading features to an extension
-- Allow to install any other kinds of blocks to command popup
-- Make CraftEditor fully independent of Vercel (uploading, ai, analytics, etc.)
+- **CraftEditor Control**: To seamlessly integrate with any state manager.
+- **Modular AI Features**: Move AI capabilities to an extension for optional use.
+- **Image Uploading as an Extension**: To give you the choice to include it or not.
+- **Command Popup Customization**: Allowing the installation of various block types.
+- **Independence from Vercel**: Making CraftEditor fully self-reliant for uploading, AI, analytics, and more.
+
+By making these changes, we aim to provide a more flexible and user-friendly editor that can be easily integrated into your existing tech stack.
 
 ## License
 
