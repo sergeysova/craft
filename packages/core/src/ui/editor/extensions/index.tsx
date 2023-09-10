@@ -11,6 +11,8 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import Highlight from "@tiptap/extension-highlight";
 import { Markdown } from "tiptap-markdown";
+import { createLowlight, all } from "lowlight";
+import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 
 // import UploadImagesPlugin from "@/ui/editor/plugins/upload-images";
 
@@ -18,6 +20,8 @@ import SlashCommand from "./slash-command";
 import UpdatedImage from "./updated-image";
 import CustomKeymap from "./custom-keymap";
 import DragAndDrop from "./drag-and-drop";
+
+const lowlight = createLowlight(all);
 
 export const defaultExtensions = [
   StarterKit.configure({
@@ -41,11 +45,7 @@ export const defaultExtensions = [
         class: "border-l-4 border-stone-700",
       },
     },
-    codeBlock: {
-      HTMLAttributes: {
-        class: "rounded-sm bg-stone-100 p-5 font-mono font-medium text-stone-800",
-      },
-    },
+    codeBlock: false,
     code: {
       HTMLAttributes: {
         class: "rounded-md bg-stone-200 px-1.5 py-1 font-mono font-medium text-stone-900",
@@ -58,6 +58,13 @@ export const defaultExtensions = [
       width: 4,
     },
     gapcursor: false,
+  }),
+  CodeBlockLowlight.configure({
+    lowlight,
+    defaultLanguage: "typescript",
+    HTMLAttributes: {
+      class: "rounded-sm bg-stone-100 p-5 font-mono font-medium text-stone-800",
+    },
   }),
   // patch to fix horizontal rule bug: https://github.com/ueberdosis/tiptap/pull/3859#issuecomment-1536799740
   HorizontalRule.extend({

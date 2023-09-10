@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@tiptap/core": "^2.1.8",
+    "@tiptap/extension-code-block-lowlight": "^2.1.8",
     "@tiptap/extension-color": "^2.1.8",
     "@tiptap/extension-highlight": "^2.1.8",
     "@tiptap/extension-horizontal-rule": "^2.1.8",
@@ -41,12 +42,13 @@
     "@tiptap/react": "^2.1.8",
     "@tiptap/starter-kit": "^2.1.8",
     "@tiptap/suggestion": "^2.1.8",
-    "tiptap-markdown": "^0.8.2",
-    "tippy.js": "^6.3.7",
-    "react-moveable": "^0.54.1",
+    "lowlight": "^3.0.0",
     "next": "13.4.19",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-moveable": "^0.54.1",
+    "tippy.js": "^6.3.7",
+    "tiptap-markdown": "^0.8.2"
   },
   "devDependencies": {
     "tailwind-config": "workspace:*",
