@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Editor as NovelEditor } from "novel";
+import { CraftEditor } from "@sergeysova/craft";
+import { defaultEditorContent } from "@/lib/default-content";
 
 export default function Editor() {
   const [saveStatus, setSaveStatus] = useState("Saved");
@@ -11,7 +12,8 @@ export default function Editor() {
       <div className="absolute right-5 top-5 z-10 mb-5 rounded-lg bg-stone-100 px-2 py-1 text-sm text-stone-400">
         {saveStatus}
       </div>
-      <NovelEditor
+      <CraftEditor
+        defaultValue={defaultEditorContent}
         onUpdate={() => {
           setSaveStatus("Unsaved");
         }}

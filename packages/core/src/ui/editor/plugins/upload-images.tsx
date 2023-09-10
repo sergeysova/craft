@@ -1,4 +1,3 @@
-import { BlobResult } from "@vercel/blob";
 import { toast } from "sonner";
 import { EditorState, Plugin, PluginKey } from "@tiptap/pm/state";
 import { Decoration, DecorationSet, EditorView } from "@tiptap/pm/view";
@@ -22,10 +21,7 @@ const UploadImagesPlugin = () =>
           const placeholder = document.createElement("div");
           placeholder.setAttribute("class", "img-placeholder");
           const image = document.createElement("img");
-          image.setAttribute(
-            "class",
-            "opacity-40 rounded-lg border border-stone-200"
-          );
+          image.setAttribute("class", "opacity-40 rounded-lg border border-stone-200");
           image.src = src;
           placeholder.appendChild(image);
           const deco = Decoration.widget(pos + 1, placeholder, {
@@ -33,9 +29,7 @@ const UploadImagesPlugin = () =>
           });
           set = set.add(tr.doc, [deco]);
         } else if (action && action.remove) {
-          set = set.remove(
-            set.find(null, null, (spec) => spec.id == action.remove.id)
-          );
+          set = set.remove(set.find(null, null, (spec) => spec.id == action.remove.id));
         }
         return set;
       },
@@ -103,9 +97,7 @@ export function startImageUpload(file: File, view: EditorView, pos: number) {
     const imageSrc = typeof src === "object" ? reader.result : src;
 
     const node = schema.nodes.image.create({ src: imageSrc });
-    const transaction = view.state.tr
-      .replaceWith(pos, pos, node)
-      .setMeta(uploadKey, { remove: { id } });
+    const transaction = view.state.tr.replaceWith(pos, pos, node).setMeta(uploadKey, { remove: { id } });
     view.dispatch(transaction);
   });
 }
@@ -124,7 +116,7 @@ export const handleImageUpload = (file: File) => {
       }).then(async (res) => {
         // Successfully uploaded image
         if (res.status === 200) {
-          const { url } = (await res.json()) as BlobResult;
+          const { url } = await res.json();
           // preload the image
           let image = new Image();
           image.src = url;
@@ -135,9 +127,7 @@ export const handleImageUpload = (file: File) => {
         } else if (res.status === 401) {
           resolve(file);
 
-          throw new Error(
-            "`BLOB_READ_WRITE_TOKEN` environment variable not found, reading image locally instead."
-          );
+          throw new Error("`BLOB_READ_WRITE_TOKEN` environment variable not found, reading image locally instead.");
           // Unknown error
         } else {
           throw new Error(`Error uploading image. Please try again.`);

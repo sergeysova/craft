@@ -4,10 +4,9 @@ import { Metadata } from "next";
 import { ReactNode } from "react";
 import Providers from "./providers";
 
-const title =
-  "Novel – Notion-style WYSIWYG editor with AI-powered autocompletions";
+const title = "Editor – Notion-style WYSIWYG editor";
 const description =
-  "Novel is a Notion-style WYSIWYG editor with AI-powered autocompletions. Built with Tiptap, OpenAI, and Vercel AI SDK.";
+  "Editor is a Notion-style WYSIWYG editor. Built with Tiptap.";
 
 export const metadata: Metadata = {
   title,
@@ -20,9 +19,9 @@ export const metadata: Metadata = {
     title,
     description,
     card: "summary_large_image",
-    creator: "@steventey",
+    creator: "@sova_original",
   },
-  metadataBase: new URL("https://novel.sh"),
+  metadataBase: new URL("https://editor.sova.dev"),
   themeColor: "#ffffff",
 };
 

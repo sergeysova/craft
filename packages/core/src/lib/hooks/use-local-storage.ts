@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useLocalStorage = <T>(
+export const useLocalStorage = <T>(
   key: string,
   initialValue: T
   // eslint-disable-next-line no-unused-vars
@@ -23,5 +23,3 @@ const useLocalStorage = <T>(
   };
   return [storedValue, setValue];
 };
-
-export default useLocalStorage;
