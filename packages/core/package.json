@@ -46,9 +46,6 @@
     "@tiptap/starter-kit": "^2.1.8",
     "@tiptap/suggestion": "^2.1.8",
     "lowlight": "^3.0.0",
-    "next": "13.4.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-moveable": "^0.54.1",
     "tippy.js": "^6.3.7",
     "tiptap-markdown": "^0.8.2"
@@ -56,7 +53,10 @@
   "devDependencies": {
     "tailwind-config": "workspace:*",
     "tsconfig": "workspace:*",
-    "tsup": "^7.2.0"
+    "tsup": "^7.2.0",
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "contributors": [
     "Sergey Sova <mail@sergeysova.com>",
