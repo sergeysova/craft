@@ -91,6 +91,7 @@ I am created `@sergeysova/craft` with the aim of offering a more modular and cus
 
 ## Roadmap
 
+- **Documentation**: To provide detailed guides and tutorials for extending functionalities, integrating with state managers, and utilizing AI capabilities.
 - **Craft Editor Control**: To seamlessly integrate with any state manager.
 - **Modular AI Features**: Move AI capabilities to an extension for optional use.
 - **Image Uploading as an Extension**: To give you the choice to include it or not.
