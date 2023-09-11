@@ -85,13 +85,13 @@ Here's how you can contribute:
 
 ## Fork
 
-This project is an enhanced version of [Novel](https://github.com/steven-tey/novel), originally created by Steven Tey. We've forked it to introduce additional customization options, all without the constraints of maintaining backward compatibility.
+This project is an enhanced version of [Novel](https://github.com/steven-tey/novel), originally created by Steven Tey. I am forked it to introduce additional customization options, all without the constraints of maintaining backward compatibility of Novel.
 
-I am forked the original [Novel](https://github.com/steven-tey/novel) project to create `@sergeysova/craft` with the aim of offering a more modular and customizable editor experience. My changes include updating dependencies, streamlining the default editor content, and disabling certain features like the Image block and AI support. These features are not gone for good; rather, I am planning to reintroduce them as optional extensions, giving you the freedom to tailor the editor to your needs.
+I am created `@sergeysova/craft` with the aim of offering a more modular and customizable editor experience. My changes include updating dependencies, streamlining the default editor content, and disabling certain features like the Image block and AI support. These features are not gone for good; rather, I am planning to reintroduce them as optional extensions, giving you the freedom to tailor the editor to your needs.
 
 ## Roadmap
 
-- **CraftEditor Control**: To seamlessly integrate with any state manager.
+- **Craft Editor Control**: To seamlessly integrate with any state manager.
 - **Modular AI Features**: Move AI capabilities to an extension for optional use.
 - **Image Uploading as an Extension**: To give you the choice to include it or not.
 - **Command Popup Customization**: Allowing the installation of various block types.

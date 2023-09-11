@@ -1,6 +1,9 @@
 {
   "name": "@sergeysova/craft",
-  "version": "0.1.20",
+  "version": "0.3.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Notion-style WYSIWYG editor with AI extensions support",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
