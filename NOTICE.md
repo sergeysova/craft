@@ -1,4 +1,4 @@
-# Notice changes of original Novel project
+# Notice changes to the original Novel project
 
 ## Key Changes:
 
