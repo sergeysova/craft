@@ -98,6 +98,7 @@ I am created `@sergeysova/craft` with the aim of offering a more modular and cus
 - **Command Popup Customization**: Allowing the installation of various block types.
 - **Independence from Vercel**: Making CraftEditor fully self-reliant for uploading, AI, analytics, and more.
 - **Notion-like Menu**: For each line, features for transforming, settings, deletion, etc., will be available.
+- **i18n Support**: To enable internationalization and localization for a more accessible and global user experience.
 
 By making these changes, we aim to provide a more flexible and user-friendly editor that can be easily integrated into your existing tech stack.
 
