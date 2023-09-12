@@ -45,7 +45,7 @@ export default function App() {
 
 ## Setting Up Locally
 
-To set up Novel locally, you'll need to clone the repository.
+To set up CraftEditor locally, you'll need to clone the repository.
 
 If you've deployed this to Vercel, you can also use [`vc env pull`](https://vercel.com/docs/cli/env#exporting-development-environment-variables) to pull the environment variables from your Vercel project.
 
@@ -59,7 +59,7 @@ pnpm dev
 
 ## Tech Stack
 
-Novel is built on the following stack:
+CraftEditor is built on the following stack:
 
 - [Tiptap](https://tiptap.dev/) – extendable text editor
 - [Prosemirror](https://prosemirror.net/) – text editing framework under Tiptap
