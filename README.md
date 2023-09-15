@@ -36,10 +36,13 @@ npm add @sergeysova/craft
 Then, you can use it in your code like this:
 
 ```jsx
-import { CraftEditor } from "@sergeysova/craft";
+import { useState } from "react";
+import { CraftEditor, JSONContent } from "@sergeysova/craft";
 
 export default function App() {
-  return <CraftEditor />;
+  const [content, setContent] = useState<JSONContent>({})
+
+  return <CraftEditor content={content} onUpdate={(editor) => setContent(editor.getJSON())} />;
 }
 ```
 
